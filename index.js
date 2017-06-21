@@ -18,11 +18,11 @@ io.sockets.on('connection', socket =>{
             socket.room = data.room;
 
             socket.emit('system', {
-                message : 'welcome to chat room'
+                message : '소진이랑 대화하기'
             });
 
             socket.broadcast.to(data.room).emit('system', {
-                message : `${data.name} is connected`
+                message : `${data.name} 오빠 왔어?`
             });
         }
 

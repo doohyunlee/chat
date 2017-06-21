@@ -19,18 +19,14 @@
                 <input id="message-input" class="form-control" type="text">
             </td>
             <td width="20%">
-                <button id="message-button" class="btn btn-default" type="submit">SEND</button>
+                <button id="message-button" data-role="button" type="submit">SEND</button>
             </td>
         </tr>
     </table>
-
 </div>
 
-
 <script type="text/javascript" src="http://cdn.socket.io/socket.io-1.4.0.js"></script>
-
 <script>
-
     var serverURL = '13.124.67.79:50000';
     var name = 'guest';
 
@@ -40,24 +36,22 @@
     var socket = null;
 
     function writeMessage(type, name, message) {
-
 		
         var html = '<div>{MESSAGE}</div>';
+        var printName = '';
+			printName = name + ' : ';
 
-		if(name  === "admin"){
-			var html = '<div><img src="/imgs" />{MESSAGE}</div>';
-		
+		if(name  === "me" || name  === "me2" || name  === "me3"){
+			var html = '<div><img src="/'+name+'" />{MESSAGE}</div>';
+			printName = '';
 		}
 
-        var printName = '';
 		/*
         if(type === 'me') {
             printName = name + ' : ';
         }
-		*/
+		*/		
 
-
-		printName = name + ' : ';
         html = html.replace('{MESSAGE}', printName + message);
 
         $(html).appendTo('.j-message');
@@ -79,18 +73,15 @@
 
 	//name = $('#my_id').val();
 
-	console.log('name :', name);
-
+		//console.log('name :', name);
         socket = io.connect(serverURL);
 
         socket.on('connection', function(data) {
-            console.log('here come');
+            //console.log('here come');
 
             if(data.type === 'connected') {
 
-
-			console.log("name -- ", name);
-
+				//console.log("name -- ", name);
                 socket.emit('connection', {
                     type : 'join',
                     name : name,
@@ -108,28 +99,25 @@
         });
 
         $('#message-button').click(function() {
-
             var $input = $('#message-input');
-	        name = $('#my_id').val();	
+		        name = $('#my_id').val();	
             var msg = $input.val();
-            sender(msg,name);
-            $input.val('');
-            $input.focus();
-
+				sender(msg,name);
+				$input.val('');
+				$input.focus();
         });
 
         $('#message-input').on('keypress', function(e) {
 
             if(e.keyCode === 13) {
-
                 var $input = $('#message-input');
 				name = $('#my_id').val();
-
                 var msg = $input.val();
                 sender(msg, name);
                 $input.val('');
                 $input.focus();
             }
+
         });
 
     });
