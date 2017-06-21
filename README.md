@@ -22,3 +22,4 @@
 #$ nohup npm run socket &
 #$ nohup npm run web &
 
+# git pull origin master
