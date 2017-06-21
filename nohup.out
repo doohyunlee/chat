@@ -1,0 +1,324 @@
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+
+> nodejs-socket.io-chat-example@1.0.0 socket /chat
+> node index.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::50000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Server.listen.Server.attach (/chat/node_modules/socket.io/lib/index.js:228:9)
+    at new Server (/chat/node_modules/socket.io/lib/index.js:52:17)
+    at Function.Server (/chat/node_modules/socket.io/lib/index.js:40:41)
+    at Object.<anonymous> (/chat/index.js:2:33)
+    at Module._compile (module.js:410:26)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "socket"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 socket: `node index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 socket script 'node index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Object.<anonymous> (/chat/webserver.js:10:4)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "web"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 web: `node webserver.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 web script 'node webserver.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node webserver.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Object.<anonymous> (/chat/webserver.js:10:4)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "web"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 web: `node webserver.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 web script 'node webserver.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node webserver.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+Killed
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "web"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 web: `node webserver.js`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 web script 'node webserver.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node webserver.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+Killed
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "web"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 web: `node webserver.js`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 web script 'node webserver.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node webserver.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 socket /chat
+> node index.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::50000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Server.listen.Server.attach (/chat/node_modules/socket.io/lib/index.js:228:9)
+    at new Server (/chat/node_modules/socket.io/lib/index.js:52:17)
+    at Function.Server (/chat/node_modules/socket.io/lib/index.js:40:41)
+    at Object.<anonymous> (/chat/index.js:2:33)
+    at Module._compile (module.js:410:26)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "socket"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 socket: `node index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 socket script 'node index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 socket /chat
+> node index.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::50000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Server.listen.Server.attach (/chat/node_modules/socket.io/lib/index.js:228:9)
+    at new Server (/chat/node_modules/socket.io/lib/index.js:52:17)
+    at Function.Server (/chat/node_modules/socket.io/lib/index.js:40:41)
+    at Object.<anonymous> (/chat/index.js:2:33)
+    at Module._compile (module.js:410:26)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "socket"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 socket: `node index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 socket script 'node index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 socket /chat
+> node index.js
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::50000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Server.listen.Server.attach (/chat/node_modules/socket.io/lib/index.js:228:9)
+    at new Server (/chat/node_modules/socket.io/lib/index.js:52:17)
+    at Function.Server (/chat/node_modules/socket.io/lib/index.js:40:41)
+    at Object.<anonymous> (/chat/index.js:2:33)
+    at Module._compile (module.js:410:26)
+
+npm ERR! Linux 4.4.0-1013-aws
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "socket"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! nodejs-socket.io-chat-example@1.0.0 socket: `node index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nodejs-socket.io-chat-example@1.0.0 socket script 'node index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nodejs-socket.io-chat-example package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nodejs-socket.io-chat-example
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nodejs-socket.io-chat-example
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /chat/npm-debug.log
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
+
+> nodejs-socket.io-chat-example@1.0.0 socket /chat
+> node index.js
+
+
+> nodejs-socket.io-chat-example@1.0.0 web /chat
+> node webserver.js
+
