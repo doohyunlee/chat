@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<style>
+		.me {
+			text-align:right;
+		}
+		.j-message p {
+		
+			border:solid 1px blue;
+			width:60%;
+			display:inline-block;
+			border-radius: 5px;
+			padding:2px;
+		}
+
+	</style>
 </head>
 <body>
 
-<div class="j-message">
+	<div data-role="page">
+        <div data-role="header"  data-position="fixed">
+            <h1>그룹채팅</h1>
 
-</div>
-<div class="j-footer">
 
-    <table>
-        <tr>
-            <td width="100%">
-		<input id="my_id" class="form-control" type="text">	
-                <input id="message-input" class="form-control" type="text">
-            </td>
-            <td width="20%">
-                <button id="message-button" data-role="button" type="submit">SEND</button>
-            </td>
-        </tr>
-    </table>
-</div>
+
+        </div>
+        <div data-role="content" style="overflow:hidden; border:solid 1px blue; height:80%" >
+
+
+		<div class="j-message">
+
+		</div>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+		 <div class="j-footer">
+		<table  width="100%" cellpadding="2">
+				<tr>
+
+				<td width="10%">
+						<input id="my_id" type="text">	
+				
+				</td>
+					<td width="70%">
+						<input id="message-input"  type="text" data-clear-btn="true">
+					</td>
+					<td width="20%">
+						<button id="message-button"  data-role="button" type="button">SEND</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
 
 <script type="text/javascript" src="http://cdn.socket.io/socket.io-1.4.0.js"></script>
 <script>
@@ -42,7 +86,12 @@
 			printName = name + ' : ';
 
 		if(name  === "me" || name  === "me2" || name  === "me3"){
-			var html = '<div><img src="/'+name+'" />{MESSAGE}</div>';
+
+	        if(type === 'me') {
+				html = '<div class="me"><img src="/'+name+'" />{MESSAGE}</div>';
+			} else {
+				 html = '<div><img src="/'+name+'" />{MESSAGE}</div>';
+			}
 			printName = '';
 		}
 
@@ -52,7 +101,7 @@
         }
 		*/		
 
-        html = html.replace('{MESSAGE}', printName + message);
+        html = html.replace('{MESSAGE}', printName + "<p>"+message+"</p>");
 
         $(html).appendTo('.j-message');
         $('body').stop();
