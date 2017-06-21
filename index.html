@@ -2,13 +2,9 @@
 <html>
 
 <head>
-
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
@@ -21,10 +17,11 @@
     <table>
         <tr>
             <td width="100%">
+		<input id="my_id" class="form-control" type="text">	
                 <input id="message-input" class="form-control" type="text">
             </td>
             <td width="20%">
-                <button id="message-button" class="btn btn-default" type="submit">SEND bb</button>
+                <button id="message-button" class="btn btn-default" type="submit">SEND</button>
             </td>
         </tr>
     </table>
@@ -36,8 +33,9 @@
 <script>
 
     var serverURL = '13.124.67.79:50000';
+    var name = 'guest';
 
-    var name = 'jin';
+  //  var name = $('#my_id').val();
     var room = '100';
 
     var socket = null;
@@ -58,8 +56,7 @@
 
     }
 
-    function sender(text) {
-
+    function sender(text,name) {
         socket.emit('user', {
             name : name,
             message : text
@@ -70,6 +67,9 @@
 
     $(document).ready(function() {
 
+	//name = $('#my_id').val();
+
+	console.log('name :', name);
         socket = io.connect(serverURL);
 
         socket.on('connection', function(data) {
@@ -94,9 +94,10 @@
         $('#message-button').click(function() {
 
             var $input = $('#message-input');
-
+	        name = $('#my_id').val();
+	
             var msg = $input.val();
-            sender(msg);
+            sender(msg,name);
             $input.val('');
             $input.focus();
 
@@ -108,9 +109,10 @@
             if(e.keyCode === 13) {
 
                 var $input = $('#message-input');
+		name = $('#my_id').val();
 
                 var msg = $input.val();
-                sender(msg);
+                sender(msg, name);
                 $input.val('');
                 $input.focus();
             }
@@ -119,7 +121,6 @@
     });
 
 </script>
-
 </body>
 </html>
 

@@ -12,6 +12,8 @@ git remote add origin https://github.com/doohyunlee/chat.git
 git push -u origin master
 …or push an existing repository from the command line
 
+git add *
+
 git remote add origin https://github.com/doohyunlee/chat.git
 git push -u origin master
 
