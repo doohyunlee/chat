@@ -40,7 +40,15 @@
     var socket = null;
 
     function writeMessage(type, name, message) {
+
+		
         var html = '<div>{MESSAGE}</div>';
+
+		if(name  === "admin"){
+			var html = '<div><img src="/imgs" />{MESSAGE}</div>';
+		
+		}
+
         var printName = '';
 		/*
         if(type === 'me') {
