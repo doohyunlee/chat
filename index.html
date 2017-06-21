@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
 
 <div class="j-message">
@@ -28,6 +26,7 @@
 
 </div>
 
+
 <script type="text/javascript" src="http://cdn.socket.io/socket.io-1.4.0.js"></script>
 
 <script>
@@ -42,12 +41,15 @@
 
     function writeMessage(type, name, message) {
         var html = '<div>{MESSAGE}</div>';
-
         var printName = '';
+		/*
         if(type === 'me') {
             printName = name + ' : ';
         }
+		*/
 
+
+		printName = name + ' : ';
         html = html.replace('{MESSAGE}', printName + message);
 
         $(html).appendTo('.j-message');
@@ -70,11 +72,17 @@
 	//name = $('#my_id').val();
 
 	console.log('name :', name);
+
         socket = io.connect(serverURL);
 
         socket.on('connection', function(data) {
-            console.log('connect');
+            console.log('here come');
+
             if(data.type === 'connected') {
+
+
+			console.log("name -- ", name);
+
                 socket.emit('connection', {
                     type : 'join',
                     name : name,
@@ -94,13 +102,11 @@
         $('#message-button').click(function() {
 
             var $input = $('#message-input');
-	        name = $('#my_id').val();
-	
+	        name = $('#my_id').val();	
             var msg = $input.val();
             sender(msg,name);
             $input.val('');
             $input.focus();
-
 
         });
 
@@ -109,7 +115,7 @@
             if(e.keyCode === 13) {
 
                 var $input = $('#message-input');
-		name = $('#my_id').val();
+				name = $('#my_id').val();
 
                 var msg = $input.val();
                 sender(msg, name);
