@@ -14,8 +14,8 @@
 
     <table>
         <tr>
-            <td width="100%">
-		<input id="my_id" class="form-control" type="text">	
+            <td width="80%">
+			<input id="my_id" class="form-control" type="text">	
                 <input id="message-input" class="form-control" type="text">
             </td>
             <td width="20%">
@@ -29,10 +29,8 @@
 <script>
     var serverURL = '13.124.67.79:50000';
     var name = 'guest';
-
   //  var name = $('#my_id').val();
     var room = '100';
-
     var socket = null;
 
     function writeMessage(type, name, message) {
