@@ -7,18 +7,64 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-	<style>
+<style>
 		.me {
 			text-align:right;
 		}
-		.j-message p {	
-
-			width:60%;
-			display:inline-block;
+    .ui-content {
+      overflow: visible !important;
+    }
+    .j-message {
+      position: relative;
+    }
+    .j-message:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background: url(http://wis.cs.ucla.edu/wis/img/porky.gif) no-repeat;
+      background-size: 40px 40px;
+    }
+​
+    .j-message div {
+    	position: relative;
+      margin-left: 60px;
+    	background: #88b7d5;
+    	border: 4px solid #c2e1f5;
+      width:60%;
 			border-radius: 5px;
 			padding:2px;
-		}
-
+      margin-top: 10px;
+    }
+    .j-message div:after, .j-message div:before {
+    	right: 100%;
+    	top: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    }
+​
+    .j-message div:after {
+    	border-color: rgba(136, 183, 213, 0);
+    	border-right-color: #88b7d5;
+    	border-width: 10px;
+    	margin-top: -30px;
+    }
+    .j-message div:before {
+    	border-color: rgba(194, 225, 245, 0);
+    	border-right-color: #c2e1f5;
+    	border-width: 16px;
+    	margin-top: -36px;
+    }
+​
+​
 	</style>
 </head>
 <body>
