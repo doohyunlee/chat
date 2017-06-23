@@ -18,7 +18,7 @@ io.sockets.on('connection', socket =>{
             socket.room = data.room;
 
             socket.emit('system', {
-                message : '소진이랑 대화하기'
+                message : '소진이랑 대화하기얌'
             });
 
             socket.broadcast.to(data.room).emit('system', {
