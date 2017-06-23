@@ -34,7 +34,7 @@ io.sockets.on('connection', socket =>{
         var room = socket.room;
 
         if(room) {
-            socket.broadcast.to(room).emit('message', msg);
+            socket.broadcast.to(room).emit('message', data);
         }
     });
 
