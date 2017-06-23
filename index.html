@@ -60,6 +60,13 @@ var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace
 
 
     function writeMessage(type, name, message) {
+
+
+		if(name.length > 10){
+			alert('아잉 소진이 아파요');
+			return false;		
+		}
+
 		
         var html = '<div>{MESSAGE}</div>';
         var printName = '';
@@ -89,6 +96,13 @@ message = XSSfilter(message);
     }
 
     function sender(text,name) {
+
+
+		if(name.length > 10){
+			alert('아잉 소진이 아파요');
+			return false;		
+		}
+
 
 
 		text = XSSfilter(text);
