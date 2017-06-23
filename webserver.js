@@ -40,6 +40,17 @@ app.get('/xss', function(req, res){
 });
 
 
+app.get('/socket', function(req, res){
+    fs.readFile('js/socket.io-1.4.0.js',function (err, data){
+        res.writeHead(200, {'Content-Type': 'text/javascript'});
+        res.end(data);
+    });
+});
+
+
+
+
+
 app.get('/',function(req, res){
     fs.readFile('index.html',function (err, data){
         res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
