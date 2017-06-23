@@ -1,3 +1,4 @@
 *.log
 *.json
+*.out
 node_modules/
