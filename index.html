@@ -53,6 +53,12 @@
     var room = '100';
     var socket = null;
 
+
+var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
+
+
+
+
     function writeMessage(type, name, message) {
 		
         var html = '<div>{MESSAGE}</div>';
@@ -70,6 +76,10 @@
 		}
 				
 
+
+message = XSSfilter(message);
+
+
         html = html.replace('{MESSAGE}', printName + "<p>"+message+"</p>");
 
         $(html).appendTo('.j-message');
@@ -79,6 +89,11 @@
     }
 
     function sender(text,name) {
+
+
+		text = XSSfilter(text);
+
+
         socket.emit('user', {
             name : name,
             message : text
