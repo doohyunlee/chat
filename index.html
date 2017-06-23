@@ -5,10 +5,10 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>소진이랑 대화하기</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link href="/css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="/xss"></script>
+	<script src="js/xssFilter.js"></script>
 </head>
 <body>
 
@@ -41,8 +41,7 @@
         </div>
     </div>
 
-<!-- script type="text/javascript" src="http://cdn.socket.io/socket.io-1.4.0.js"></script -->
-<script type="text/javascript" src="/socket"></script>
+<script type="text/javascript" src="js/socket.io-1.4.0.js"></script>
 <script>
     var serverURL = '13.124.67.79:50000';
     var name = 'guest';
@@ -64,7 +63,7 @@
 		if(name  === "me" || name  === "me2" || name  === "me3"){
 
 	        if(type === 'me') {
-				html = '<div class="me"><img src="/'+name+'" />{MESSAGE}</div>';
+				html = '<div class="me"><img src="image/'+name+'.jpg" />{MESSAGE}</div>';
 			} else {
 				 html = '<div><img src="/'+name+'" />{MESSAGE}</div>';
 			}
