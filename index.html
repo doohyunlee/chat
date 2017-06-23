@@ -53,16 +53,10 @@
     var room = '100';
     var socket = null;
 	//var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
-
-
-
 	var xssfilter = new xssFilter();
 
-
-    function writeMessage(type, name, message) {
-
-
-		if(name.length > 10){
+	function writeMessage(type, name, message) {
+		if(name.length > 10 || text.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
 		}
@@ -83,7 +77,6 @@
 		
 				
 		message = xssfilter.filter(message);
-
 		//message = XSSfilter(message);
 
         html = html.replace('{MESSAGE}', printName + "<p>"+message+"</p>");
@@ -95,18 +88,13 @@
     }
 
     function sender(text,name) {
-
-
-		if(name.length > 10){
+		if(name.length > 10 || text.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
 		}
 
-
-
 		//text = XSSfilter(text);
 		text = xssfilter.filter(text);
- 
 
         socket.emit('user', {
             name : name,
