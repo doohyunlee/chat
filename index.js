@@ -22,7 +22,7 @@ io.sockets.on('connection', socket =>{
             });
 
             socket.broadcast.to(data.room).emit('system', {
-                message : `${data.name} 오빠 왔어?`
+                message : `${data.name} 오빠들 공격하지마!!`
             });
         }
 
