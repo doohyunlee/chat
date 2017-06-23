@@ -8,11 +8,8 @@ io.sockets.on('connection', socket =>{
     });
 
     socket.on('connection', data => {
-
         if(data.type === 'join') {
-
             socket.join(data.room);
-
             // depracated
             // socket.set('room', data.room);
             socket.room = data.room;
