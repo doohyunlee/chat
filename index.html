@@ -5,10 +5,10 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>소진이랑 대화하기</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link href="/css" rel="stylesheet" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link href="/css" rel="stylesheet"></link>
-
+	<script src="/xss"></script>
 
 </head>
 <body>
@@ -52,11 +52,11 @@
   //  var name = $('#my_id').val();
     var room = '100';
     var socket = null;
+	//var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
 
 
-var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
 
-
+	var xssfilter = new xssFilter();
 
 
     function writeMessage(type, name, message) {
@@ -66,7 +66,6 @@ var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace
 			alert('아잉 소진이 아파요');
 			return false;		
 		}
-
 		
         var html = '<div>{MESSAGE}</div>';
         var printName = '';
@@ -81,11 +80,11 @@ var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace
 			}
 			printName = '';
 		}
+		
 				
+		message = xssfilter.filter(message);
 
-
-message = XSSfilter(message);
-
+		//message = XSSfilter(message);
 
         html = html.replace('{MESSAGE}', printName + "<p>"+message+"</p>");
 
@@ -105,8 +104,9 @@ message = XSSfilter(message);
 
 
 
-		text = XSSfilter(text);
-
+		//text = XSSfilter(text);
+		text = xssfilter.filter(text);
+ 
 
         socket.emit('user', {
             name : name,
