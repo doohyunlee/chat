@@ -1,8 +1,13 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-	 app.use(express.static('public'));
 
+app.locals.pretty= true;
+app.set('view engine', 'jade');
+app.set('views', './views');
+app.use(express.static('public'));
+
+/*
 app.get('/',function(req, res){
     fs.readFile('index.html',function (err, data){
         res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
@@ -11,6 +16,19 @@ app.get('/',function(req, res){
     });
 });
 
+*/
+
+
+app.get('/',function(req, res){
+
+
+		res.render('index');
+
+	
+
+
+
+});
 
 app.listen(8000, function(){
 	console.log('start');

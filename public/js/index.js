@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<title>소진이랑 대화하기</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link href="css/main.css" rel="stylesheet" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="js/xssFilter.js"></script>
-</head>
-<body>
-
-	<div data-role="page">
-        <div data-role="header"  data-position="fixed">
-            <h1>그룹채팅</h1>
-        </div>
-        <div data-role="content" style="overflow:hidden;  height:80%" >
-			<div class="j-message">
-
-			</div>
-
-        </div>
-        <div data-role="footer" data-position="fixed">
-		 <div class="j-footer">
-		<table  width="100%" cellpadding="2">
-				<tr>
-				<td width="10%">
-					<input id="my_id" type="text">					
-				</td>
-					<td width="70%">
-						<input id="message-input"  type="text" data-clear-btn="true">
-					</td>
-					<td width="20%">
-						<button id="message-button"  data-role="button" type="button">SEND</button>
-					</td>
-				</tr>
-			</table>
-		</div>
-        </div>
-    </div>
-
-<script type="text/javascript" src="js/socket.io-1.4.0.js"></script>
-<script>
-    var serverURL = '13.124.67.79:50000';
+var serverURL = '13.124.67.79:50000';
     var name = 'guest';
   //  var name = $('#my_id').val();
     var room = '100';
@@ -149,10 +104,3 @@
         });
 
     });
-
-</script>
-</body>
-</html>
-
-
-
