@@ -3,11 +3,22 @@ const io = require('socket.io').listen(50000);
 
 io.sockets.on('connection', socket =>{
 
+
+
+
     socket.emit('connection', {
         type : 'connected'
     });
 
     socket.on('connection', data => {
+
+
+		console.log('data : ', data);
+
+
+
+
+
         if(data.type === 'join') {
             socket.join(data.room);
             // depracated

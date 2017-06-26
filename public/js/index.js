@@ -1,4 +1,7 @@
-var serverURL = '13.124.67.79:50000';
+	//var serverURL = '13.124.67.79:50000';
+
+	var serverURL = 'localhost:50000';
+
     var name = 'guest';
   //  var name = $('#my_id').val();
     var room = '100';
@@ -57,8 +60,6 @@ var serverURL = '13.124.67.79:50000';
 	//console.log('name :', name);
         socket = io.connect(serverURL);
 		
-
-
         socket.on('connection', function(data) {
            //console.log('here come');
 

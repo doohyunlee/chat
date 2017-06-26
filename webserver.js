@@ -1,5 +1,5 @@
 var express = require('express');
-var fs = require('fs');
+//var fs = require('fs');
 var app = express();
 
 app.locals.pretty= true;
@@ -15,18 +15,12 @@ app.get('/',function(req, res){
         res.end();
     });
 });
-
 */
 
-
 app.get('/',function(req, res){
-
-
 		res.render('index');
 
-	
-
-
+		console.log("id : "res.query.id);
 
 });
 
