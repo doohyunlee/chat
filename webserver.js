@@ -1,6 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
+	 app.use(express.static('public'));
 
 app.get('/',function(req, res){
     fs.readFile('index.html',function (err, data){
@@ -10,7 +11,6 @@ app.get('/',function(req, res){
     });
 });
 
-app.use(express.static('public'));
 
 app.listen(8000, function(){
 	console.log('start');

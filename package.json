@@ -28,6 +28,7 @@
   "homepage": "https://github.com/devjin0617/nodejs-socket.io-chat-example#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "jade": "^1.11.0",
     "socket.io": "^1.7.2",
     "xssfilter": "^0.5.3"
   }
