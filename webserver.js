@@ -20,7 +20,7 @@ app.get('/',function(req, res){
 app.get('/',function(req, res){
 		res.render('index');
 
-		console.log("id : ", res.query.id);
+	//	console.log("id : ", res.query.id);
 
 });
 

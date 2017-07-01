@@ -29,6 +29,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "jade": "^1.11.0",
+    "node-libcurl": "^1.1.0",
     "socket.io": "^1.7.2",
     "xssfilter": "^0.5.3"
   }
