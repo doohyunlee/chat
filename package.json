@@ -6,6 +6,7 @@
   "scripts": {
     "socket": "node index.js",
     "web": "node webserver.js",
+    "trans": "node trans.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/devjin0617/nodejs-socket.io-chat-example#readme",
   "dependencies": {
+    "@google-cloud/translate": "^0.8.2",
     "express": "^4.15.3",
     "jade": "^1.11.0",
     "node-libcurl": "^1.1.0",
