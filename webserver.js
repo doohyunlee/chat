@@ -24,6 +24,7 @@ app.get('/',function(req, res){
 
 });
 
-app.listen(8000, function(){
+//app.listen(8000, function(){
+app.listen(80, function(){
 	console.log('start');
 });
