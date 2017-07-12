@@ -1,7 +1,9 @@
 	//var serverURL = '13.124.67.79:50000';
 
-	var serverURL = '115.68.226.18:50000';
-	//var serverURL = 'localhost:50000';
+	//var serverURL = '115.68.226.18:50000';
+	var serverURL = 'localhost:50000';
+
+
 
     var name = 'guest';
   //  var name = $('#my_id').val();
@@ -10,6 +12,12 @@
 	//var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
 	var xssfilter = new xssFilter();
 	function writeMessage(type, name, message) {
+
+
+console.log('type :', type);
+
+
+
 		if(name.length > 10 || message.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
@@ -21,7 +29,8 @@
 
 		if(name  === "me" || name  === "me2" || name  === "me3"){
 
-	        if(type === 'me') {
+
+	        if(type === "me") {
 				html = '<div class="me"><img src="image/'+name+'.jpg" />{MESSAGE}</div>';
 			} else {
 				 html = '<div><img src="/'+name+'" />{MESSAGE}</div>';
@@ -40,6 +49,9 @@
     }
 
     function sender(text,name) {
+
+
+
 		if(name.length > 10 || text.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
@@ -51,6 +63,10 @@
             name : name,
             message : text
         });
+
+
+
+
 
         writeMessage('me', name, text);
     }
@@ -80,6 +96,16 @@
         });
 
         socket.on('message', function(data) {
+
+
+
+			console.log("data ;;; ", data);
+
+
+
+				
+
+
             writeMessage('other', data.name, data.message);
         });
 
