@@ -14,7 +14,7 @@
 	function writeMessage(type, name, message) {
 
 
-console.log('type :', type);
+//console.log('type :', type);
 
 
 
@@ -99,7 +99,7 @@ console.log('type :', type);
 
 
 
-			console.log("data ;;; ", data);
+		//	console.log("data ;;; ", data);
 
 
 
