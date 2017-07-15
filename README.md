@@ -2,9 +2,9 @@
 
 
 
-##…or create a new repository on the command line
+## …or create a new repository on the command line
 
-##echo "# chat" >> README.md
+## echo "# chat" >> README.md
 
 ##git init
 
