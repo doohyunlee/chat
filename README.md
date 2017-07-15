@@ -1,18 +1,16 @@
 # chat
 
-"`
 
-#…or create a new repository on the command line
 
-#echo "# chat" >> README.md
+##…or create a new repository on the command line
 
-#git init
+##echo "# chat" >> README.md
 
-#git add README.md
+##git init
 
-#git commit -m "first commit"
-
-#git remote add origin https://github.com/doohyunlee/chat.git
+##git add README.md 
+##git commit -m "first commit" 
+##git remote add origin https://github.com/doohyunlee/chat.git
 
 #git push -u origin master
 
@@ -24,7 +22,7 @@
 #git remote add origin https://github.com/doohyunlee/chat.git
 
 #git push -u origin master
-"`
+
 
 
 #$ nohup npm run socket &
