@@ -24,8 +24,8 @@
 #git remote add origin https://github.com/doohyunlee/chat.git
 
 #git push -u origin master
+"`
 
-`"
 
 #$ nohup npm run socket &
 
