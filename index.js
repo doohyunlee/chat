@@ -78,6 +78,8 @@ io.sockets.on('connection', socket =>{
 
 		reponse.message =message;
 
+
+
         if(room) {
 			socket.broadcast.to(room).emit('message', data);
         }

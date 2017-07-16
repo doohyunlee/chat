@@ -1,5 +1,5 @@
 # chat 
-===============
+
 ## node  socket.io jade
 
 `
