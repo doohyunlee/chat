@@ -1,9 +1,5 @@
-
-	var serverURL = '115.68.226.18:50000';
-	//var serverURL = 'localhost:50000';
-
-
-
+	//var serverURL = '115.68.226.18:50000';
+	var serverURL = 'localhost:50000';
     var name = 'guest';
   //  var name = $('#my_id').val();
     var room = '100';
@@ -11,12 +7,7 @@
 	//var XSSfilter = function(content) { return content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
 	var xssfilter = new xssFilter();
 	function writeMessage(type, name, message) {
-
-
 //console.log('type :', type);
-
-
-
 		if(name.length > 10 || message.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
@@ -48,34 +39,23 @@
     }
 
     function sender(text,name) {
-
-
-
 		if(name.length > 10 || text.length > 100){
 			alert('아잉 소진이 아파요');
 			return false;		
 		}
-
 		//text = XSSfilter(text);
 		text = xssfilter.filter(text);
         socket.emit('user', {
             name : name,
             message : text
         });
-
-
-
-
-
         writeMessage('me', name, text);
     }
 
     $(document).ready(function() {
-
 	//name = $('#my_id').val();
 	//console.log('name :', name);
         socket = io.connect(serverURL);
-		
         socket.on('connection', function(data) {
            //console.log('here come');
 
@@ -89,10 +69,10 @@
                 });
             }
         });
-
         socket.on('system', function(data) {
             writeMessage('system', 'system', data.message);
         });
+
 
         socket.on('message', function(data) {
 
