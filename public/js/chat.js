@@ -75,16 +75,7 @@
 
 
         socket.on('message', function(data) {
-
-
-
 		//	console.log("data ;;; ", data);
-
-
-
-				
-
-
             writeMessage('other', data.name, data.message);
         });
 
