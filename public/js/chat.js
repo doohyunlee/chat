@@ -1,6 +1,6 @@
 
-	var serverURL = '115.68.226.18:50000';
-	//var serverURL = 'localhost:50000';
+	//var serverURL = '115.68.226.18:50000';
+	var serverURL = 'localhost:50000';
 
 
 
