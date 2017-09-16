@@ -16,7 +16,7 @@ io.sockets.on('connection', socket =>{
             socket.room = data.room;
 
             socket.emit('system', {
-                message : '소진이랑 대화하기얌'
+                message : '소진이랑 대화하기얌 나'
             });
 
             socket.broadcast.to(data.room).emit('system', {
@@ -77,8 +77,6 @@ io.sockets.on('connection', socket =>{
 		curl.perform();
 
 		reponse.message =message;
-
-
 
         if(room) {
 			socket.broadcast.to(room).emit('message', data);

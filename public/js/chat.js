@@ -49,20 +49,13 @@
             name : name,
             message : text
         });
-
-
-
-
-
         writeMessage('me', name, text);
     }
 
     $(document).ready(function() {
-
 	//name = $('#my_id').val();
 	//console.log('name :', name);
         socket = io.connect(serverURL);
-		
         socket.on('connection', function(data) {
            //console.log('here come');
 
@@ -76,10 +69,10 @@
                 });
             }
         });
-
         socket.on('system', function(data) {
             writeMessage('system', 'system', data.message);
         });
+
 
         socket.on('message', function(data) {
 
